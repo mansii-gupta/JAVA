@@ -52,8 +52,6 @@ public class BankAccount {
 	
 	public void getDetails() {
 		
-		Operations operations=new Operations();
-		
 		if(this.accNo==0) {
 			System.out.println("No Account Available");
 			return;
@@ -92,8 +90,6 @@ public class BankAccount {
 		System.out.println("Interest Rate: "+this.interest);
 		System.out.println("Balance :"+this.balance);
 		
-		operations.performOperations();
-		
 		
 	}
 	
@@ -103,7 +99,7 @@ public class BankAccount {
 		Scanner sc= new Scanner(System.in);
 		
 		BankAccount account= new BankAccount();
-		
+		Operations operations=new Operations();
 		
 		while(true) {
 			System.out.println("1: Open new Account \n2: Existing Account\n3. Exit");
@@ -112,10 +108,11 @@ public class BankAccount {
 			switch(choice) {
 		
 			case 1: account.setDetails();
-					break;
+				break;
 				
 			case 2: account.getDetails();
-					break;
+				operations.performOperations();
+				break;
 				
 			case 3: return;
 		

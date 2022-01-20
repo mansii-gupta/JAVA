@@ -1,8 +1,8 @@
 package in.mansii.bankdetails;
-
 import java.lang.String;
 import java.util.Scanner;
 
+import javax.swing.plaf.synth.SynthOptionPaneUI;
 
 public class BankAccount {
 	
@@ -52,8 +52,6 @@ public class BankAccount {
 	
 	public void getDetails() {
 		
-		Operations operations=new Operations();
-		
 		if(this.accNo==0) {
 			System.out.println("No Account Available");
 			return;
@@ -85,14 +83,12 @@ public class BankAccount {
 		
 		
 		
-		System.out.println("\nHere Are Your Details\n");
+		System.out.println("Here Are Your Details\n");
 		
 		System.out.println("Name: "+this.name);
 		System.out.println("Account Number:"+ this.accNo);
 		System.out.println("Interest Rate: "+this.interest);
 		System.out.println("Balance :"+this.balance);
-		
-		operations.performOperations();
 		
 		
 	}
@@ -103,25 +99,28 @@ public class BankAccount {
 		Scanner sc= new Scanner(System.in);
 		
 		BankAccount account= new BankAccount();
-		
+		Operations operations=new Operations();
 		
 		while(true) {
-			System.out.println("1: Open new Account \n2: Existing Account\n3. Exit");
-			int choice=sc.nextInt();
+		System.out.println("1: Open new Account \n2:View Existing Account\n3. Exit");
+		int choice=sc.nextInt();
 		
-			switch(choice) {
+		switch(choice) {
 		
-			case 1: account.setDetails();
-					break;
+		case 1: account.setDetails();
+				break;
 				
-			case 2: account.getDetails();
-					break;
+		case 2: account.getDetails();
+				operations.performOperations();
+				break;
 				
-			case 3: return;
-		
-			default: System.out.println("Invalid Choice");
-			}
+		case 3: return;
 		}
+		}
+		
+		
+		
+		
 		
 	}
 

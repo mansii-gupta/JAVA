@@ -17,8 +17,6 @@ public class Operations {
 		balance=balance+amount;
 		account.setBalance(balance);
 		System.out.println("Money Deposited Successfully");
-		
-		System.out.println("New Balance"+ balance);
 	
 		
 	}
@@ -34,7 +32,7 @@ public class Operations {
 		}
 		float balance=account.getBalance();
 		if(balance==0.0f) {
-			System.out.println("Balance = 0.00rs");
+			System.out.println("0 balance");
 			return;
 		}
 		if(amount>balance) {
@@ -45,9 +43,6 @@ public class Operations {
 		balance=balance-amount;
 		account.setBalance(balance);
 		System.out.println("Money Withdrawn Successfully");
-		
-		System.out.println("New Balance"+ balance);
-		
 		
 	}
 	

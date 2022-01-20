@@ -17,8 +17,6 @@ public class Operations {
 		balance=balance+amount;
 		account.setBalance(balance);
 		System.out.println("Money Deposited Successfully");
-		
-		System.out.println("New Balance"+ balance);
 	
 		
 	}
@@ -34,7 +32,7 @@ public class Operations {
 		}
 		float balance=account.getBalance();
 		if(balance==0.0f) {
-			System.out.println("Balance = 0.00rs");
+			System.out.println("0 balance");
 			return;
 		}
 		if(amount>balance) {
@@ -46,17 +44,14 @@ public class Operations {
 		account.setBalance(balance);
 		System.out.println("Money Withdrawn Successfully");
 		
-		System.out.println("New Balance"+ balance);
-		
-		
 	}
 	
 	public void performOperations() {
 		Scanner sc= new Scanner(System.in);
+		System.out.println("Enter your choice");
+		System.out.println("1. Deposit \n2. Withdrawl \n3. Exit");
 		
 		while(true) {
-			System.out.println("\nEnter your choice");
-			System.out.println("1. Deposit \n2. Withdrawl \n3. Exit");
 			int choice=sc.nextInt();
 			switch(choice) {
 		

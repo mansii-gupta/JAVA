@@ -34,7 +34,7 @@ public class Operations {
 		}
 		float balance=account.getBalance();
 		if(balance==0.0f) {
-			System.out.println("Balance = 0.00rs");
+			System.out.println("0 balance");
 			return;
 		}
 		if(amount>balance) {
