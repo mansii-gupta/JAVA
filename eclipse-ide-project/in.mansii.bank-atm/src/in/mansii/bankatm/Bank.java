@@ -28,13 +28,13 @@ public class Bank {
 		return this.accNo;
 	}
 	
-	public float getInterest() {
-		return this.interest;
+	public float getBalance() {
+		return this.balance;
 	}
 	
 	public String getDetails() {
 		
-		String response="Name: "+getName()+"\nAccount Number: "+getAccount()+"\nIFSC Code: "+this.IFSC+"\nInterest Rate: "+getInterest();
+		String response="Name: "+getName()+"\nAccount Number: "+getAccount()+"\nIFSC Code: "+this.IFSC+"\nInterest Rate: "+this.interestv;
 		return response;	
 	}
 	
@@ -70,7 +70,7 @@ public class Bank {
 		}
 		else {
 			Bank.balance=Bank.balance-amount;
-			response="Money Withdrawn!\nPlease Collect Your Cash!\n";
+			response="Money Withdrawn!";
 		}
 		return response;
 	}
@@ -82,7 +82,7 @@ public class Bank {
 		}
 		else {
 			Bank.balance=Bank.balance+amount;
-			response="Transaction Successfull, \nMoney Deposited!";
+			response="Money Deposited!";
 		}
 		return response;
 	}
