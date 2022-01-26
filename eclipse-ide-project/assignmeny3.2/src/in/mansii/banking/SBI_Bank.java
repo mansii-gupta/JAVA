@@ -5,7 +5,7 @@ import java.util.Scanner;
 public class SBI_Bank {
 	
 	static BankAccount SBI = null;
-	static ICICI_Bank ICICI=null;
+	static float interest=12.0f;
 
 	public static boolean isAccount(int accountNumber)
 	{
@@ -23,7 +23,7 @@ public class SBI_Bank {
 		name=sc.next();
 		System.out.print("Password: ");
 		password=sc.next();
-		float interest=12.0f;
+		
 		SBI= new BankAccount(123,name,password,0.00f,interest);
 		System.out.println("\nCongratulations, Your Bank Account is Created\n");
 		System.out.println("Kindly note:");

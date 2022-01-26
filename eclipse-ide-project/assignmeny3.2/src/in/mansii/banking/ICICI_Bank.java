@@ -5,6 +5,7 @@ import java.util.Scanner;
 public class ICICI_Bank {
 
 	static BankAccount ICICI=null;
+	static float interest=13.0f;
 	
 	public static boolean isAccount(int accountNumber)
 	{
@@ -21,7 +22,7 @@ public class ICICI_Bank {
 		String name=sc.next();
 		System.out.print("Password: ");
 		String password=sc.next();
-		float interest=13.0f;
+		
 		ICICI= new BankAccount(124,name,password,0.00f,interest);
 		System.out.println("\nCongratulations, Your Bank Account is Created\n");
 		System.out.println("Kindly note:");
@@ -32,7 +33,7 @@ public class ICICI_Bank {
 	
 	public static void creditInterest() {
 		if(ICICI== null) {
-			System.err.println("You don't have a ICICI bank account\n\n");
+			System.err.println("You don't have an ICICI bank account\n\n");
 			return;
 		}
 		ICICI.creditInterest();
@@ -43,7 +44,7 @@ public class ICICI_Bank {
 	
 	public static void depositMoney(int amount) {
 		if(ICICI== null) {
-			System.err.println("You don't have a ICICI bank account\n\n");
+			System.err.println("You don't have an ICICI bank account\n\n");
 			return;
 		}
 		Scanner sc= new Scanner(System.in);
@@ -59,7 +60,7 @@ public class ICICI_Bank {
 	
 	public static void withdrawMoney(int amount) {
 		if(ICICI== null) {
-			System.err.println("You don't have a ICICI bank account\n\n");
+			System.err.println("You don't have an ICICI bank account\n\n");
 			return;
 		}
 		Scanner sc=new Scanner(System.in);
@@ -78,7 +79,7 @@ public class ICICI_Bank {
 	
 	public static void tranferMoney() {
 		if(ICICI== null) {
-			System.err.println("You don't have a ICICI bank account\n\n");
+			System.err.println("You don't have an ICICI bank account\n\n");
 			return;
 		}
 		Scanner sc= new Scanner(System.in);
@@ -98,7 +99,7 @@ public class ICICI_Bank {
 	
 	public static void viewInfo() {
 		if(ICICI== null) {
-			System.err.println("You don't have a ICICI bank account\n\n");
+			System.err.println("You don't have an ICICI bank account\n\n");
 			return;
 		}
 		Scanner sc= new Scanner(System.in);
@@ -110,7 +111,7 @@ public class ICICI_Bank {
 	
 	public static void closeAccount() {
 		if(ICICI== null) {
-			System.err.println("You don't have a ICICI bank account\n\n");
+			System.err.println("You don't have an ICICI bank account\n\n");
 			return;
 		}
 		Scanner sc= new Scanner(System.in);

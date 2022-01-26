@@ -34,7 +34,7 @@ public class Bank {
 	
 	public String getDetails() {
 		
-		String response="Name: "+getName()+"\nAccount Number: "+getAccount()+"\nIFSC Code: "+this.IFSC+"\nInterest Rate: "+this.interestv;
+		String response="Name: "+getName()+"\nAccount Number: "+getAccount()+"\nIFSC Code: "+this.IFSC+"\nInterest Rate: "+this.interest;
 		return response;	
 	}
 	
