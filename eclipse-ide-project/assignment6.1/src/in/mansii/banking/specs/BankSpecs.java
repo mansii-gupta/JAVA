@@ -543,10 +543,5 @@ public class BankSpecs {
 		bank.deposit(currentAccountNumber, 999);
 	}
 	
-	
-	
-	
-	 
-	
 
 }

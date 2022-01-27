@@ -51,9 +51,7 @@ public abstract class BankAccount {
 		if(amount>getMaxWithdrawableAmount())
 			throw new InsufficientBalanceException(accountNumber, amount-getMaxWithdrawableAmount(),"Insufficient Balance");
 		
-		if(amount%100 !=0 )
-			throw new InvalidAmountException(accountNumber,amount,"Amount must be a multiple of 100");
-
+		
 		
 		balance-=amount;
 		//mission success. no news is good news
